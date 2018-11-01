@@ -1,21 +1,24 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
-    return None
-
 
 def home(request):
-    return None
+    return render(request, 'home/home.html')
 
 
 def market(request):
-    return None
+    return render(request, 'market/market.html')
 
 
 def cart(request):
-    return None
+    return render(request, 'cart/cart.html')
 
 
 def mine(request):
-    return None
+    return render(request, 'mine/mine.html')
+
+
+
+
+
+
