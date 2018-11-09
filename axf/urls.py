@@ -13,4 +13,10 @@ urlpatterns = [
     url(r'^checkaccount/$', views.checkaccount, name='checkaccount'),
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^login/$', views.login, name='login'),
+
+    url(r'^addcart/$', views.addcart, name='addcart'),
+    url(r'^subcart/$', views.subcart, name='subcart'),
+
+    url(r'^changecartstatus/$', views.changecartstatus, name='changecartstatus'),
+    url(r'^changecartselect/$', views.changecartselect, name='changecartselect'),
 ]
