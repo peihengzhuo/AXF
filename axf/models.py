@@ -122,3 +122,16 @@ class Cart(models.Model):
 
     class Meta:
         db_table = 'axf_cart'
+
+class Order(models.Model):
+    user = models.ForeignKey(User)
+    createtime = models.DateTimeField(auto_now_add=True)
+
+    status = models.IntegerField(default=1)
+    identifier = models.CharField(max_length=256)
+
+class OrderGoods(models.Model):
+    order = models.ForeignKey(Order)
+    goods = models.ForeignKey(Goods)
+
+    number = models.IntegerField(default=1)
